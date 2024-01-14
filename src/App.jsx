@@ -1,20 +1,10 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import styles from './App.module.css'
 
 export default function App() {
 
   const [count, setCount] = useState(0)
   const [countA, setCountA] = useState(0)
-    
-    function add(event) {
-      const id = event.target.dataset.id;
-      const no = event.target.dataset.no;
-      if(id) {
-        setCount(count + parseInt(id));
-      } if (no) {
-        setCountA(countA + parseInt(no));
-      }
-    }
 
   return (
     <div className={styles.macbookAir1}>
@@ -29,25 +19,31 @@ export default function App() {
           {countA}
         </h1>
       </div>
-      <button className={styles.button} autoFocus={true} onClick={add} data-id="1">
+      <button className={styles.button} autoFocus={true} 
+      onClick={() => setCount(count + 1)}>
         +1
       </button>
-      <button className={styles.button1} autoFocus={true} onClick={add} data-id="2">
+      <button className={styles.button1} autoFocus={true} 
+      onClick={() => setCount(count + 2)}>
         +2
       </button>
-      <button className={styles.button2} autoFocus={true} onClick={add} data-id="3">
+      <button className={styles.button2} autoFocus={true} 
+      onClick={() => setCount(count + 3)}>
         +3
       </button>
       <div className={styles.away}>Away</div>
-      <button className={styles.button3} autoFocus={true} onClick={add} data-no="1">
+      <button className={styles.button3} autoFocus={true} 
+      onClick={() => setCountA(countA + 1)}>
         +1
       </button>
-      <button className={styles.button4} autoFocus={true} onClick={add} data-no="2">
+      <button className={styles.button4} autoFocus={true} 
+      onClick={() => setCountA(countA + 2)}>
         +2
       </button>
-      <button className={styles.button5} autoFocus={true} onClick={add} data-no="3">
+      <button className={styles.button5} autoFocus={true} 
+      onClick={() => setCountA(countA + 3)}>
         +3
       </button>
     </div>
   );
-};
+}
