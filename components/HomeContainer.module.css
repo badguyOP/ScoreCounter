@@ -1,0 +1,60 @@
+.h1,
+.home {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  font-weight: 400;
+  font-family: inherit;
+}
+.homeScore,
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  width: 105px;
+  border: 5px solid #000;
+  box-sizing: border-box;
+  height: 105px;
+  justify-content: center;
+  padding: 10px;
+}
+.homeScore {
+  justify-content: flex-start;
+  gap: 37px;
+}
+.button,
+.button1,
+.button2 {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  font-size: 40px;
+  font-family: Inter;
+  color: #000;
+  text-align: left;
+  display: inline-block;
+}
+.homeDiv,
+.score {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 35px;
+}
+.homeDiv {
+  position: absolute;
+  top: 247px;
+  left: 341px;
+  flex-direction: column;
+  align-items: center;
+  gap: 63px;
+  text-align: left;
+  font-size: 70px;
+  color: #000;
+  font-family: Inter;
+}
